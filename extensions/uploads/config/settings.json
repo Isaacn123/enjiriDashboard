@@ -1,0 +1,11 @@
+{
+    "provider": "aws-s3",
+    "providerOptions": {
+      "accessKeyId": "AKIAVZT2MEMFMKJ3TVLU",
+      "secretAccessKey": "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",
+      "region":"us-east-2",
+      "params": {
+        "Bucket": "enjiricenter"
+      }
+    }
+  }

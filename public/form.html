@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <h1>Contact Form</h1>
+
+    <form>
+         <label>
+            Name:
+            <input type="text" name="name" required>
+        </label><br><br/>
+
+     <label>Email:
+        <input type="email" name="email" required>
+     </label>
+     <br/><br/>
+     <label>Subject:<input type="text" name="subject" required>
+     </label><br/><br/>
+     <label>Message:
+        <input type="text" name="message" required>
+     </label>
+     <br/><br/>
+
+
+     <button type="submit">Submit</button>
+
+    </form>
+
+    <script>
+
+        $(()=> {
+        
+            const $form = $('form');
+            $form.on('submit', function(e){
+                e.preventDefault();
+                const $form = $(this);
+
+                const data = $form.serializeArray();
+
+                const formdata = data.reduce((acc, current)=>{
+                acc[current.name] =  current.value;
+                return acc;
+                }, {})
+              
+                $.ajax({
+                    type: "POST",
+                    url: "http://localhost:1337/contacts/postrequest",
+                    data: formdata,
+                }).done(function(){
+                    console.log("Success")
+                }).fail(function(){
+                    console.log("Failure");
+                })
+
+            });
+
+            });
+    </script>
+    
+</body>
+</html>
