@@ -6,8 +6,8 @@ module.exports = ({ env }) => {
       upload: {
         provider: 'aws-s3',
         providerOptions: {
-          accessKeyId: env('AKIAVZT2MEMFMKJ3TVLU'),
-          secretAccessKey: env('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'),
+          accessKeyId: env('AWS_ACCESS_KEY_ID'),
+          secretAccessKey: env('AWS_SECRET_ACCESS_KEY'),
           region: env('us-east-2'),
           params: {
             Bucket: env('enjiricenter'),
