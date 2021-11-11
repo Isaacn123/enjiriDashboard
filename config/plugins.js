@@ -10,7 +10,7 @@ module.exports = ({ env }) => {
           secretAccessKey: env('AWS_SECRET_ACCESS_KEY'),
           region: env('us-east-1'),
           params: {
-            Bucket: env('enjiricenter2'),
+            Bucket: env('AWS_S3_BUCKET'),
           },
         },
       },
