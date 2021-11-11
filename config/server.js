@@ -6,4 +6,7 @@ module.exports = ({ env }) => ({
       secret: env('ADMIN_JWT_SECRET', '8fae27a0d0ff2c9fb253dff90bf178f8'),
     },
   },
+  autoReload: {
+    enabled: true
+  }
 });
