@@ -145,12 +145,18 @@ const displayNotification = (message, status) => {
   );
   dispatch(showNotification(message, status));
 };
+
+
 const displayNewNotification = config => {
   dispatch(showNewNotification(config));
 };
+
+
 const lockApp = data => {
   dispatch(freezeApp(data));
 };
+
+
 const unlockApp = () => {
   dispatch(unfreezeApp());
 };
