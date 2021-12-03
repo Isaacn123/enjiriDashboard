@@ -36,6 +36,16 @@
       "plugin": "upload",
       "required": true,
       "pluginOptions": {}
+    },
+    "related_images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }
