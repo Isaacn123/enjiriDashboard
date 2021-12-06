@@ -1,5 +1,5 @@
 ---
 deployment:
       tasks:
-        - export DEPLOYPATH=/home/isaachos/backend.enjiricenterministries.org/
+        - export DEPLOYPATH=/home/isaachos/backend1.enjiricenterministries.org/
         - /bin/cp -r /home/isaachos/repositories/enjiriDashboard/* $DEPLOYPATH
