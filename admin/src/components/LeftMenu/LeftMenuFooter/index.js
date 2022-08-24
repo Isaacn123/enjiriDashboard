@@ -8,6 +8,7 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 import Wrapper, { A } from './Wrapper';
 
+
 function LeftMenuFooter({ version }) {
   // PROJECT_TYPE is an env variable defined in the webpack config
   // eslint-disable-next-line no-undef
@@ -17,15 +18,14 @@ function LeftMenuFooter({ version }) {
     <Wrapper>
       <div className="poweredBy">
         <A key="website" href="https://strapi.io" target="_blank" rel="noopener noreferrer">
-          Strapi
+          Enjiri Center 
         </A>
         &nbsp;
         <A
           href={`https://github.com/strapi/strapi/releases/tag/v${version}`}
           key="github"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer" >
           v{version}
         </A>
         &nbsp;
